@@ -49,9 +49,7 @@ for i in tablasAmarillas:
         semifinalistaId.append(contador)
         semifinalista.append(verificador)
 
-if estadoAmarillo==0:
-    print("Se acabo la ronda amarilla, hubo un ganador")
-else:
+if estadoAmarillo==1:
     print("Naide gano, jugaremos un numero mas")
     print("Ingrese el ultimo numero")
     numeroextra= int(input())
@@ -65,6 +63,6 @@ else:
             print("Ha ganadp cpm el numero extra con la tabla %d", contadorWinner)
             estadoAmarillo=0
             break
+        
 if estadoAmarillo==1:
     print("Se acabo la ronda amarilla, nadie gano, siga con la siguiente ronda")
-print(len(tablasAmarillas))
