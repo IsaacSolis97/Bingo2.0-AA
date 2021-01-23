@@ -1,10 +1,11 @@
 print("*****Bingo 2,0*****")
-print("Ingrese los numeros ganadores de la primera ronda, tablas amarillas")
+
+print("Ingrese los números ganadores de la primera ronda, tablas amarillas")
 winner=[]
 #esta variable me ayudara continuar el juego
 estadoAmarillo=1;
 for i in range(8):
-    print("Ingrese el numero %d:", i+1)
+    print("Ingrese el numero", i+1 ,": ")
     numero=int(input())
     winner.append(numero)
 #convierto la lista en un conjunto
@@ -60,9 +61,9 @@ if estadoAmarillo==1:
         if len(verficadroextra)==0:
             indiceWinner= semifinalista.index(numeroextra)
             contadorWinner = semifinalistaId[indiceWinner]
-            print("Ha ganadp cpm el numero extra con la tabla %d", contadorWinner)
+            print("Ha ganadp cpm el numero extra con la tabla ", contadorWinner)
             estadoAmarillo=0
             break
-        
+
 if estadoAmarillo==1:
     print("Se acabo la ronda amarilla, nadie gano, siga con la siguiente ronda")
