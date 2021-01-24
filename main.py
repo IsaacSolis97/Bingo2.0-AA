@@ -9,7 +9,7 @@ def rondas(color):
             print("Ingrese el número: ", contador, ": ")
             try:
                 numero = int(input())
-                if(numero <= 20):
+                if(numero <= 20) and (numero not in winner):
                     winner.append(numero)
                     contador = contador+ 1
                 else:
@@ -24,7 +24,7 @@ def rondas(color):
             print("Ingrese el número: ", contador, ": ")
             try:
                 numero = int(input())
-                if(numero <= 20):
+                if(numero <= 20 ) and (numero not in winner):
                     winner.append(numero)
                     contador = contador+ 1
                 else:
@@ -38,7 +38,7 @@ def rondas(color):
             print("Ingrese el número: ", contador, ": ")
             try:
                 numero = int(input())
-                if(numero <= 20):
+                if(numero <= 20) and (numero not in winner):
                     winner.append(numero)
                     contador = contador+ 1
                 else:
