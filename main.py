@@ -7,11 +7,14 @@ def rondas(color):
         print("Ingrese los 14 números ganadores de la primera ronda, las tablas de color ", color)
         while(len(winner) < 14):
             print("Ingrese el número: ", contador, ": ")
-            numero = int(input())
-            if(numero <= 20):
-                winner.append(numero)
-                contador = contador+ 1
-            else:
+            try:
+                numero = int(input())
+                if(numero <= 20):
+                    winner.append(numero)
+                    contador = contador+ 1
+                else:
+                    print("Numero Inválido")
+            except:
                 print("Numero Inválido")
 
         fichero = open("TablasAmarillas.csv", "r", )
@@ -19,22 +22,28 @@ def rondas(color):
         print("Ingrese los 14 números ganadores de la primera ronda, las tablas de color ", color)
         while(len(winner) < 14):
             print("Ingrese el número: ", contador, ": ")
-            numero = int(input())
-            if(numero <= 20):
-                winner.append(numero)
-                contador = contador+ 1
-            else:
+            try:
+                numero = int(input())
+                if(numero <= 20):
+                    winner.append(numero)
+                    contador = contador+ 1
+                else:
+                    print("Numero Inválido")
+            except:
                 print("Numero Inválido")
         fichero = open("TablasAzules.csv", "r", )
     if (color == "rojo"):
         print("Ingrese los 11 números ganadores de la primera ronda, las tablas de color ", color)
         while(len(winner) < 11):
             print("Ingrese el número: ", contador, ": ")
-            numero = int(input())
-            if(numero <= 20):
-                winner.append(numero)
-                contador = contador+ 1
-            else:
+            try:
+                numero = int(input())
+                if(numero <= 20):
+                    winner.append(numero)
+                    contador = contador+ 1
+                else:
+                    print("Numero Inválido")
+            except:
                 print("Numero Inválido")
         fichero = open("TablasRojas.csv", "r", )
 
