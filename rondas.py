@@ -13,9 +13,9 @@ def rondas(color):
     if(color=="amarilla"):
         fichero = open ("TabllasYelllow.csv","r",)
     if (color == "azul"):
-        fichero = open("TablasBlue.csv", "r", )
+        fichero = open("TablasBlue.csv.csv", "r", )
     if (color == "rojo"):
-        fichero = open("TablasRed.csv", "r", )
+        fichero = open("TablasRed.csv.csv", "r", )
     #creamos la lista que tendra toddos los conjuntos de tablas amarillas
     tablasAmarillas = []
     while(True):
@@ -71,12 +71,3 @@ def rondas(color):
 
     if estadoAmarillo==1:
         print("Se acabo la ronda", color ," nadie gano, siga con la siguiente ronda")
-
-print("*****Bingo 2,0*****")
-ronda1= "amarilla"
-ronda2= "azul"
-ronda3= "rojo"
-
-rondas(ronda1)
-rondas(ronda2)
-rondas(ronda3)
