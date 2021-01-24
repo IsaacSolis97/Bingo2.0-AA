@@ -1,28 +1,42 @@
 def rondas(color):
     winner=[]
+    contador = 1
     # esta variable me ayudara continuar el juego
     estadoAmarillo = 1;
     if (color == "amarilla"):
         print("Ingrese los 14 números ganadores de la primera ronda, las tablas de color ", color)
-        for i in range(14):
-            print("Ingrese el número: ", i + 1, ": ")
+        while(len(winner) < 14):
+            print("Ingrese el número: ", contador, ": ")
             numero = int(input())
-            winner.append(numero)
-            fichero = open("TablasAmarillas.csv", "r", )
+            if(numero <= 20):
+                winner.append(numero)
+                contador = contador+ 1
+            else:
+                print("Numero Inválido")
+
+        fichero = open("TablasAmarillas.csv", "r", )
     if (color == "azul"):
         print("Ingrese los 14 números ganadores de la primera ronda, las tablas de color ", color)
-        for i in range(14):
-            print("Ingrese el número: ", i + 1, ": ")
+        while(len(winner) < 14):
+            print("Ingrese el número: ", contador, ": ")
             numero = int(input())
-            winner.append(numero)
-            fichero = open("TablasAzules.csv", "r", )
+            if(numero <= 20):
+                winner.append(numero)
+                contador = contador+ 1
+            else:
+                print("Numero Inválido")
+        fichero = open("TablasAzules.csv", "r", )
     if (color == "rojo"):
         print("Ingrese los 11 números ganadores de la primera ronda, las tablas de color ", color)
-        for i in range(11):
-            print("Ingrese el número: ", i + 1, ": ")
+        while(len(winner) < 11):
+            print("Ingrese el número: ", contador, ": ")
             numero = int(input())
-            winner.append(numero)
-            fichero = open("TablasRojas.csv", "r", )
+            if(numero <= 20):
+                winner.append(numero)
+                contador = contador+ 1
+            else:
+                print("Numero Inválido")
+        fichero = open("TablasRojas.csv", "r", )
 
     #convierto la lista en un conjunto
     setWinner = set(winner)
