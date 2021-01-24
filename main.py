@@ -1,27 +1,39 @@
 def rondas(color):
-    print("Ingrese los números ganadores de la primera ronda, tablas", color)
     winner=[]
-    #esta variable me ayudara continuar el juego
-    estadoAmarillo=1;
-    for i in range(8):
-        print("Ingrese el número: ", i+1 ,": ")
-        numero=int(input())
-        winner.append(numero)
+    # esta variable me ayudara continuar el juego
+    estadoAmarillo = 1;
+    if (color == "amarilla"):
+        print("Ingrese los 14 números ganadores de la primera ronda, las tablas de color ", color)
+        for i in range(14):
+            print("Ingrese el número: ", i + 1, ": ")
+            numero = int(input())
+            winner.append(numero)
+            fichero = open("TablasAmarillas.csv", "r", )
+    if (color == "azul"):
+        print("Ingrese los 14 números ganadores de la primera ronda, las tablas de color ", color)
+        for i in range(14):
+            print("Ingrese el número: ", i + 1, ": ")
+            numero = int(input())
+            winner.append(numero)
+            fichero = open("TablasAzules.csv", "r", )
+    if (color == "rojo"):
+        print("Ingrese los 11 números ganadores de la primera ronda, las tablas de color ", color)
+        for i in range(11):
+            print("Ingrese el número: ", i + 1, ": ")
+            numero = int(input())
+            winner.append(numero)
+            fichero = open("TablasRojas.csv", "r", )
+
     #convierto la lista en un conjunto
     setWinner = set(winner)
-    #abro el fichero
-    if(color=="amarilla"):
-        fichero = open ("TabllasYelllow.csv","r",)
-    if (color == "azul"):
-        fichero = open("TablasBlue.csv", "r", )
-    if (color == "rojo"):
-        fichero = open("TablasRed.csv", "r", )
-    #creamos la lista que tendra toddos los conjuntos de tablas amarillas
-    tablasAmarillas = []
+
+    #creamos la lista que tendra toddos los conjuntos de tablas
+    tablas = []
     while(True):
         linea = fichero.readline()
         if not linea:
             break
+
         #quitamos el salto de liena
         lienaNuena= linea.rstrip()
         listatabla = lienaNuena.split(" ")
@@ -32,15 +44,18 @@ def rondas(color):
         #creamos los conjuntos
         settabla = set(listatabla)
         #los agregaamos a lista de tablas amarillas
-        tablasAmarillas.append(settabla)
+        tablas.append(settabla)
 
     fichero.close()
+
     #empiezo a recorrer la lista de tablas amarillas
     contador = 0
-    ##creamos una lista de semifinalista
+
+    ##cream1os una lista de semifinalista
     semifinalista = []
     semifinalistaId=[]
-    for i in tablasAmarillas:
+
+    for i in tablas:
         contador= contador + 1
         #conjutno digerencia entre la tabla particpante y el jugo ganador
         verificador = setWinner.difference(i)
