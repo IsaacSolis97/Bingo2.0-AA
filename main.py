@@ -4,7 +4,7 @@ def rondas(color):
     #esta variable me ayudara continuar el juego
     estadoAmarillo=1;
     for i in range(8):
-        print("Ingrese el numero", i+1 ,": ")
+        print("Ingrese el número: ", i+1 ,": ")
         numero=int(input())
         winner.append(numero)
     #convierto la lista en un conjunto
@@ -55,8 +55,8 @@ def rondas(color):
             semifinalista.append(verificador)
 
     if estadoAmarillo==1:
-        print("Naide gano, jugaremos un numero mas")
-        print("Ingrese el ultimo numero")
+        print("Nadie ganó, jugaremos un número mas!!")
+        print("Ingrese el último numero:")
         numeroextra= int(input())
         setextra= {numeroextra}
         for i in semifinalista:
@@ -65,12 +65,12 @@ def rondas(color):
             if len(verficadroextra)==0:
                 indiceWinner= semifinalista.index(numeroextra)
                 contadorWinner = semifinalistaId[indiceWinner]
-                print("Ha ganadp cpm el numero extra con la tabla ", contadorWinner)
+                print("Ha ganado com el número extra con la tabla ", contadorWinner)
                 estadoAmarillo=0
                 break
 
     if estadoAmarillo==1:
-        print("Se acabo la ronda", color ," nadie gano, siga con la siguiente ronda")
+        print("Se acabó la ronda ", color ," Nadie gano, siga con la siguiente ronda!")
 
 print("*****Bingo 2,0*****")
 ronda1= "amarilla"
